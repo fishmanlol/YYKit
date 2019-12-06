@@ -24,9 +24,9 @@
     if (one == nil) {
         // iOS 9 compatible
         NSString *mode = [NSRunLoop currentRunLoop].currentMode;
-        if (mode.length == 27 &&
-            [mode hasPrefix:@"UI"] &&
-            [mode hasSuffix:@"InitializationRunLoopMode"]) {
+        if (mode.length == 21 &&
+            [mode hasPrefix:@"kCF"] &&
+            [mode hasSuffix:@"RunLoopDefaultMode"]) {
             return nil;
         }
     }
